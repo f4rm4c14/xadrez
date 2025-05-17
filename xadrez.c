@@ -1,44 +1,47 @@
 #include <stdio.h>
 
- int main ()
- {
+ void torre(int n) {
+    
+      if(n >0){
+            printf(" Torre cinco casas para direita\n");
+            torre( n-1);
+        }
+ }
 
-    int tor = 0, bis = 0;
+ void bispo(int n) {
+    
+      if(n >0){
+            printf("Diagonal para cima e a Direita\n");
+            bispo( n-1);
+        }
+ }
+void rainha(int n) {
+    
+      if(n >0){
+            printf("Rainha move-se em todas as direções\n");
+            rainha( n-1);
+        }
+ }
+
+int main ()
+ {
     int i,j;
     char baixo;
-   
-    while (tor <=5)
-    {
-        printf (" Torre cinco casas para direita\n");
-        tor++;
-    }
-
-    do
-    {
-        if (bis <=5)
-        {
-            printf("Diagonal para cima e a Direita\n");
-        }else {
-            printf(" teste inválido");
-        }
-        bis++;
-    } while (bis <=5);
+    int num = 8;
+    int numero = 5;
+    torre(numero);
     
-    for (int rai=0; rai<8; rai++)
-    {
-        printf("Rainha move-se em todas as direções\n");
-    }
 
-    for ( i=1; i<=2;i++ )
-    {
-        baixo = 'c';
-            
-        for ( j=1; j<=i;j++ )
-            {
+    bispo(numero);
+    
+    rainha(num);
+
+     for (i =1, j = 2; i <2 || j < i;i++, j++ ){
+        baixo = 'c';             
+       
             printf("%c ", baixo);
-            }
-            printf("\n");
-    }
+            
+       }
     
 
     
